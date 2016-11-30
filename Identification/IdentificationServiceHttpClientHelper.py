@@ -323,8 +323,10 @@ class IdentificationServiceHttpClientHelper:
                     return operation_response[self._OPERATION_PROC_RES_FIELD_NAME]
                 elif operation_response[self._OPERATION_STATUS_FIELD_NAME] == \
                         self._OPERATION_STATUS_FAILED:
+                    if operation_response[self._OPERATION_MESSAGE_FIELD_NAME] == 'IncompleteEnrollment':
+                        Explanation = ' (The reason might be the audio file you used to enroll is too short!)'
                     raise Exception('Operation Error: ' +
-                                    operation_response[self._OPERATION_MESSAGE_FIELD_NAME])
+                                    operation_response[self._OPERATION_MESSAGE_FIELD_NAME] + Explanation)
                 else:
                     time.sleep(self._OPERATION_STATUS_UPDATE_DELAY)
         except:

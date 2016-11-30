@@ -58,7 +58,7 @@ def enroll_profile(subscription_key, profile_id, file_path, force_short_audio):
 if __name__ == "__main__":
     if len(sys.argv) < 5:
         print('Usage: python EnrollProfile.py <subscription_key> <profile_id> '
-            '<enrollment_file_path>')
+            '<enrollment_file_path> <force_short_audio>')
         print('\t<subscription_key> is the subscription key for the service')
         print('\t<profile_id> is the profile ID of the profile to enroll')
         print('\t<enrollment_file_path> is the enrollment audio file path')
