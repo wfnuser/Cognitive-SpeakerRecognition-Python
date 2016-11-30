@@ -10,7 +10,7 @@ First, you must obtain a free Speaker Recognition API subscription key by [follo
 To use this sample application, there are four different scenarios:
  1. Create a user profile: `python Identification\CreateProfile.py <subscription_key>`
  2. Print all user profiles: `python Identification\PrintAllProfiles.py <subscription_key>`
- 3. Enroll user profiles: `python Identification\EnrollProfile.py <subscription_key> <profile_id> <enrollment_file_path>`
+ 3. Enroll user profiles: `python Identification\EnrollProfile.py <subscription_key> <profile_id> <enrollment_file_path> <force_short_audio>`
  4. Identify test files: `python Identification\IdentifyFile.py <subscription_key> <identification_file_path> <profile_ids>...`
 
 Microsoft will receive the audio files you upload and may use them to improve Speaker Recognition API and related services. By submitting an audio, you confirm you have consent from everyone in it.
